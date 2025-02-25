@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization of Grant Data</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'btn-pri': '#FFFFC5',
+                        'btn-pri-bg': '#B3EBF2',
+                        'pri-bg': '#EFEBE3'
+
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .sora-font {
+            font-family: "Sora", serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body class="sora-font bg-gradient-to-t from-btn-pri to-btn-pri-bg">
+    <header class="w-5/6 mx-auto">
+        <div class="navbar">
+            <div class="navbar-start">
+                <div class="w-32">
+                    <img src="images/trophy.png" alt="">
+                </div>
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><a class="text-xl text-blue-950 font-bold">Home</a></li>
+                        <li><a class="text-xl text-blue-950 font-bold">News</a></li>
+                        <li><a class="text-xl text-blue-950 font-bold">Blogs</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a class="text-xl text-blue-950 font-bold">Home</a></li>
+                    <li><a class="text-xl text-blue-950 font-bold">News</a></li>
+                    <li><a class="text-xl text-blue-950 font-bold">Blogs</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <div class="form-control">
+                    <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+                </div>
+                <a class="btn bg-blue-900 text-white">Search</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-5/6 mx-auto text-center">
+        <section class="">
+            <h1 class="font-bold text-4xl text-blue-950 mt-28">Visualization of Grant Data</h1>
+            <p class="font-light text-xl text-blue-950 mt-9">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Est
+                cum
+                placeat corporis reiciendis, natus,
+                molestiae aspernatur quo voluptatibus molestias repellat veritatis impedit facere tempore totam autem,
+                ipsum delectus dignissimos dolorum.</p>
+        </section>
+        <section>
+            <section class="my-4">
+                <div class="py-4">
+                    <div>
+                        <h1 class="ml-5 lg:ml-64 text-btn-pri font-semibold text-2xl lg:text-4xl lg:mb-12 ">
+                        </h1>
+                    </div>
+                    <div class="hero">
+
+
+                        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                            <div
+                                class="hidden lg:flex gap-2 items-center bg-white px-2 py-2 md:px-5 lg:px-5 py-4 rounded-lg top-28 md:top-80 md:left-32 lg:left-28">
+                                <div class="bg-btn-pri-bg p-4 rounded-lg">
+                                    <h3>Start Date</h3>
+                                </div>
+                                <div>
+                                    <select class="select select-warning w-full max-w-xs">
+                                        <option disabled selected>2000</option>
+                                        <option>2003</option>
+                                        <option>2004</option>
+                                        <option>2005</option>
+                                        <option>2006</option>
+                                        <option>2007</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div
+                                class="hidden lg:flex gap-2 items-center bg-white px-2 py-2 md:px-5 lg:px-5 py-4 rounded-lg top-28 md:top-80 md:left-32 lg:left-28">
+                                <div class="bg-btn-pri-bg p-4 rounded-lg">
+                                    <h3>Start Date</h3>
+                                </div>
+                                <div>
+                                    <select class="select select-warning w-full max-w-xs">
+                                        <option disabled selected>2000</option>
+                                        <option>2003</option>
+                                        <option>2004</option>
+                                        <option>2005</option>
+                                        <option>2006</option>
+                                        <option>2007</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div
+                                class="hidden lg:flex gap-2 items-center bg-white px-2 py-2 md:px-5 lg:px-5 py-4 rounded-lg top-28 md:top-80 md:left-32 lg:left-28">
+                                <div class="bg-btn-pri-bg p-4 rounded-lg">
+                                    <h3>Start Date</h3>
+                                </div>
+                                <div>
+                                    <select class="select select-warning w-full max-w-xs">
+                                        <option disabled selected>2000</option>
+                                        <option>2003</option>
+                                        <option>2004</option>
+                                        <option>2005</option>
+                                        <option>2006</option>
+                                        <option>2007</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div
+                                class="hidden lg:flex gap-2 items-center bg-white px-2 py-2 md:px-5 lg:px-5 py-4 rounded-lg top-28 md:top-80 md:left-32 lg:left-28">
+                                <div class="bg-btn-pri-bg p-4 rounded-lg">
+                                    <h3>Start Date</h3>
+                                </div>
+                                <div>
+                                    <select class="select select-warning w-full max-w-xs">
+                                        <option disabled selected>2000</option>
+                                        <option>2003</option>
+                                        <option>2004</option>
+                                        <option>2005</option>
+                                        <option>2006</option>
+                                        <option>2007</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div
+                                class="hidden lg:flex gap-2 items-center bg-white px-2 py-2 md:px-5 lg:px-5 py-4 rounded-lg top-28 md:top-80 md:left-32 lg:left-28">
+                                <div class="bg-btn-pri-bg p-4 rounded-lg">
+                                    <h3>Start Date</h3>
+                                </div>
+                                <div>
+                                    <select class="select select-warning w-full max-w-xs">
+                                        <option disabled selected>2000</option>
+                                        <option>2003</option>
+                                        <option>2004</option>
+                                        <option>2005</option>
+                                        <option>2006</option>
+                                        <option>2007</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div
+                                class="hidden lg:flex gap-2 items-center bg-white px-2 py-2 md:px-5 lg:px-5 py-4 rounded-lg top-28 md:top-80 md:left-32 lg:left-28">
+                                <div class="bg-btn-pri-bg p-4 rounded-lg">
+                                    <h3>Start Date</h3>
+                                </div>
+                                <div>
+                                    <select class="select select-warning w-full max-w-xs">
+                                        <option disabled selected>2000</option>
+                                        <option>2003</option>
+                                        <option>2004</option>
+                                        <option>2005</option>
+                                        <option>2006</option>
+                                        <option>2007</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div
+                                class="hidden lg:flex gap-2 items-center bg-white px-2 py-2 md:px-5 lg:px-5 py-4 rounded-lg top-28 md:top-80 md:left-32 lg:left-28">
+                                <div class="bg-btn-pri-bg p-4 rounded-lg">
+                                    <h3>Start Date</h3>
+                                </div>
+                                <div>
+                                    <select class="select select-warning w-full max-w-xs">
+                                        <option disabled selected>2000</option>
+                                        <option>2003</option>
+                                        <option>2004</option>
+                                        <option>2005</option>
+                                        <option>2006</option>
+                                        <option>2007</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div
+                                class="hidden lg:flex gap-2 items-center bg-white px-2 py-2 md:px-5 lg:px-5 py-4 rounded-lg top-28 md:top-80 md:left-32 lg:left-28">
+                                <div class="bg-btn-pri-bg p-4 rounded-lg">
+                                    <h3>Start Date</h3>
+                                </div>
+                                <div>
+                                    <select class="select select-warning w-full max-w-xs">
+                                        <option disabled selected>2000</option>
+                                        <option>2003</option>
+                                        <option>2004</option>
+                                        <option>2005</option>
+                                        <option>2006</option>
+                                        <option>2007</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+    </footer>
+
+</body>
+
+</html>
