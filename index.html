@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles/styles.css">
     <script>
         tailwind.config = {
             theme: {
@@ -85,6 +86,7 @@
                 molestiae aspernatur quo voluptatibus molestias repellat veritatis impedit facere tempore totam autem,
                 ipsum delectus dignissimos dolorum.</p>
         </section>
+
         <section class="my-4">
             <div class="py-4">
                 <div>
@@ -231,14 +233,60 @@
             </div>
             </div>
         </section>
-        <section>
 
+        <section>
+            <div class="tooltip" id="tooltip"></div>
+            <div class="map-container">
+                <!-- SVG MAP -->
+                <object type="image/svg+xml" data="us-map.svg" id="usMap"></object>
         </section>
     </main>
 
     <footer>
     </footer>
 
+    <script>
+        const tooltip = document.getElementById('tooltip');
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const map = document.getElementById('usMap');
+
+            map.addEventListener('load', () => {
+                const svgDoc = map.contentDocument;
+                const states = svgDoc.querySelectorAll('path'); // all state shapes
+
+                states.forEach(state => {
+                    const stateName = state.getAttribute('name') || state.getAttribute('id');
+
+                    // Dummy data (you can replace this with your real data)
+                    const stateData = {
+                        CA: "California: $300M",
+                        TX: "Texas: $200M",
+                        NY: "New York: $250M",
+                        FL: "Florida: $180M"
+                        // ... add more
+                    };
+
+                    state.addEventListener('mouseover', (e) => {
+                        const id = state.getAttribute('id');
+                        tooltip.innerText = stateData[id] || `State: ${id}`;
+                        tooltip.style.display = 'block';
+                    });
+
+                    state.addEventListener('mousemove', (e) => {
+                        tooltip.style.left = e.pageX + 10 + 'px';
+                        tooltip.style.top = e.pageY + 10 + 'px';
+                    });
+
+                    state.addEventListener('mouseout', () => {
+                        tooltip.style.display = 'none';
+                    });
+                });
+            });
+        });
+    </script>
 </body>
+
+
 
 </html>
